@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        margin: 10px 10px;
+    }
+    button {
+        background: #cc6677;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+<form>
+        <input value id="aInput" placeholder="Nhập vao so a">
+        <input value id="bInput" placeholder="Nhập vao so b">
+</form>
+<button class=" button" onclick="output()">Enter</button>
+<span>Cac so nguyen to trong khoang a, b:</span>
+<span class="output"></span>
+
+<script>
+    output = () => {
+            const a = document.getElementById('aInput').value
+            const b = document.getElementById('bInput').value
+            if(a < b) {
+                var higherNumber = b;
+                var lowerNumber = a; 
+            } else if ( a = b) {
+                console.log("Khong chua so nguyen to nao")
+            } else {
+                var higherNumber = a;
+                var lowerNumber = b; 
+            }
+
+            console.log(lowerNumber, higherNumber)
+
+            for (let i = lowerNumber; i <= higherNumber; i++) {
+                let flag = 0;
+                for (let j = 2; j < i; j++) {
+                        if (i % j == 0) {
+                                flag = 1;
+                                break;
+                        }
+                    }
+                if (i > 1 && flag == 0) {
+                        let prime = []
+                        prime.push(i)
+                        console.log(i)
+                    }
+                }
+                // console.log(prime)
+
+        document.querySelector("output").innerHTML = prime     
+    }
+</script>
+</body>
+
+</html>

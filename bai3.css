@@ -1,0 +1,40 @@
+h1{
+width: 91px;
+height: 40px;
+
+font-family: 'Merriweather';
+font-style: normal;
+font-weight: 900;
+font-size: 32px;
+line-height: 40px;
+}
+.headertop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.headertop1{
+    border-style: solid;
+    border-width: 1px ;
+    padding: 10px ;
+}
+.headertop2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.header{
+    margin: 10px; 
+}
+.two{
+    background-color: aqua;
+}
+.mainboard{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+span{
+    /* color: aqua; */
+    border-style: solid;
+    border-radius: 5px;
+}
